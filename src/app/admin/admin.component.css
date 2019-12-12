@@ -1,0 +1,11 @@
+.label{
+    display: block;
+    padding-left: 50px;
+}
+.input{
+    
+    margin-left: 50px;
+}
+#text::-moz-placeholder {
+    opacity: 0 !important; 
+   }

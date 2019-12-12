@@ -1,0 +1,44 @@
+
+<h1>Admin Page</h1>
+<form [formGroup]="product">
+  <label class="label" >Categories:
+  <select class="input" formControlName="categories"  >
+       <option selected >Home Appliance</option>
+      <option>Kids wear</option>
+      <option >Electronics</option>
+      <option>Furnitures</option>
+      <option>Books</option>
+  </select>
+</label>
+
+<label class="label">Item:
+    <input id="text" type="tel"  class="input"  formControlName="item"> 
+</label>
+<label class="label">Quantity: 
+        <input type="number" class="input" formControlName="quantity">
+    </label>
+    <label class="label">Price:
+            <input type="number" class="input" formControlName="price">
+        </label>
+
+        <input class="input btn btn-primary" (click)="add()" value="Add" type="submit" [routerLink]="['/admin']">
+</form> 
+
+<table class="table" style="margin-top: 20px;" >
+    <tr>
+        <th>S.no</th>
+        <th>Category</th>
+        <th>Item</th>
+        <th>Qty</th>
+        <th>Price/Qty</th>
+        <th>Action</th>
+    </tr>
+    <tr *ngFor="let element of data" >
+        <td>{{sno}}</td>
+        <td>{{element.categories}}</td>
+        <td>{{element.item}}</td>
+        <td>{{element.quantity}}</td>
+        <td>{{element.price}}</td>
+        <td><button class="btn btn-primary">Edit</button>||<button (click)="delete(element)" class="btn btn-primary">Delete</button></td>
+    </tr>
+</table>

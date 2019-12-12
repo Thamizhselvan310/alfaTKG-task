@@ -1,0 +1,16 @@
+
+<h1 style="display: inline;">Customer Page</h1>
+ <button style="float: right;" class="btn btn-primary" [routerLink]="['/admin']">Admin</button>
+<div class="container">
+    
+    <div *ngFor="let temp of data">
+    <div class="row">
+        <div class="col-lg-12">
+          <span> Qty:{{temp.quantity}}</span><span style="padding-left: 50px;">Price:{{temp.price}}</span><br>
+          <span>{{temp.categories}}-{{temp.item}}</span>
+        </div>
+    </div>
+    <hr>
+    </div>
+
+</div>
